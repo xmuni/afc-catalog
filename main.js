@@ -1,8 +1,13 @@
+'use strict';
+
 
 var checkboxes = [];
 var box_values = [];
 
+var attributes_json = [];
+
 Main();
+
 
 function Main()
 {
@@ -20,6 +25,21 @@ function Main()
 
     RefreshMenu();
 }
+
+
+function fetch_json(url)
+{
+	fetch(url)
+		.then(function(response) {
+			return response.json();
+		})
+		.then(function(data) {
+			attributes_json = data;
+			// localStorage.setItem(flname,JSON.stringify(data));
+		})
+		.catch(error => console.error(error))
+}
+
 
 function RefreshMenu()
 {
