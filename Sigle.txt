@@ -1,0 +1,14 @@
+Brick shapes:
+
+M mattone
+L listello
+Q quadrato
+R rettangolo
+B rombo
+E esagono
+O ottagono
+S speciale non decorato
+D speciale decorato
+
+
+447dvp

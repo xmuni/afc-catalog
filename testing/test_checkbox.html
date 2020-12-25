@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<label class="checkbox">
+  <input type="checkbox"/>
+  <span class="overlay">
+    <svg 
+         xmlns="http://www.w3.org/2000/svg"
+         width="24"
+         height="24"
+         viewBox="0 0 24 24"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         class="icon">
+      <polyline points="20 6 9 17 4 12"/>
+    </svg>
+  </span>
+</label>
+
+
+<style>
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.checkbox .overlay {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 24px;
+  width: 24px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid #F39C12;
+  transform: rotate(-90deg);
+  transition: all 0.3s;
+}
+
+.checkbox .icon {
+  color: white;
+  display: none;
+}
+
+.checkbox input:checked ~ .overlay {
+  background-color: #F39C12;
+  border-radius: 8px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border: 2px solid #F39C12;
+}
+
+.checkbox input:checked ~ .overlay .icon {
+  display: block;
+}
+</style>
+
+</body>
+</html>
+

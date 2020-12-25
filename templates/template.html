@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="../main.css">
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+    <!-- Bootstrap -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+
+
+    {% if title %}
+        <title>Catalogo -  {{ title }}</title>
+    {% else %}
+        <title>Catalogo</title>
+    {% endif %}
+</head>
+
+<body>
+
+    
+	<!-- Header -->
+    <header id="header">
+		<a id="header-content" href="#">
+			<img src="../img/afc-logo-small.png" alt="Header logo">
+			<div id="titles">
+				<h2><div class="c1">Antica Fornace</div><div class="c2">Carraro</div></h2>
+				<h3 class="line-decorate">
+                    
+                        Il cotto fatto a mano
+                    
+                </h3>
+			</div>
+		</a>
+    </header>
+
+
+
+    <main>
+
+        {% for header,path,floors in [floors, floors_unlisted, floors_main] %}
+
+        <h2>{{ header }}</h2>
+
+        <div id="floors" class="">
+            {% for i in range(floors|length) %}
+            <div class="box">
+                <div class="img-container">
+                    <a data-fancybox="gallery" href="../{{ path }}/{{ floors[i] }}">
+                        <img src="../{{ path }}/{{ floors[i] }}" alt="">
+                    </a>
+                </div>
+                <div class="caption">
+                    <span class="floor-name">{{ i+1 }}</span>
+                    <input type="checkbox" class="simple-custom-checkbox pin-to-corner"/>
+                </div>
+                <div class="floormenu">
+                    <label for="dropdown_size_{{ i+1 }}">Dimensione:</label>
+                    <select id="dropdown_size_{{ i+1 }}">
+                        <option value="0">cm 25 x 12,5 x 2,3</option>
+                        <option value="1">cm 30 x 15 x 2,3</option>
+                        <option value="1">cm 50 x 20 x 3</option>
+                    </select>
+                    <label for="dropdown_laying_{{ i+1 }}">Posa:</label>
+                    <select id="dropdown_laying_{{ i+1 }}">
+                        <option value="0">Spina di pesce</option>
+                        <option value="1">Parallela</option>
+                        <option value="2">Altro</option>
+                    </select>
+                    <label for="dropdown_color_{{ i+1 }}">Colorazione:</label>
+                    <select id="dropdown_color_{{ i+1 }}">
+                        <option value="0">Colori misti</option>
+                        <option value="1">Rosato</option>
+                        <option value="2">Paglierino</option>
+                        <option value="3">Altro</option>
+                    </select>
+                    <label for="dropdown_finish_{{ i+1 }}">Finitura:</label>
+                    <select id="dropdown_finish_{{ i+1 }}">
+                        <option value="0">Spazzolato</option>
+                        <option value="1">Levigato</option>
+                        <option value="2">Grezzo</option>
+                    </select>
+                </div>
+
+            </div>
+            {% endfor %}
+        </div>
+
+        {% endfor %}
+
+        <h2>Mattoni e articoli singoli</h2>
+        
+        <div id="tablegrid" class="">
+
+            <div class="row header">
+                {% for header in headers %}
+                    <div class="cell">{{ header_translations[header] }}</div>
+                {% endfor %}
+                <div class="cell">{{ header_translations['select'] }}</div>
+            </div>
+            
+            {% for item in items %}
+            <div class="row">
+                {% for header in headers %}
+                    <div class="cell">
+                    {% for value in item[header] %}
+                        {% if header == 'img' %}
+                            <a data-fancybox="gallery" data-caption="{{ item[art] }}" href="../img/singles/{{ value }}"><img src="../img/singles/{{ value }}" alt=""></a>
+                        {% else %}
+                            <span class="{% if header == 'cod_art' %}sku{% endif %}">{{ value }}</span>
+                        {% endif %}
+                    {% endfor %}
+                    </div>
+                {% endfor %}
+                <!-- Add checkbox column -->
+                <div class="cell">
+                    {% for sku in item['cod_art'] %}
+                        <span class="">
+                            <input id="checkbox_{{ sku }}" type="checkbox" class="simple-custom-checkbox"/>
+                            <!-- <input type="checkbox" id="checkbox_{{ sku }}" /> -->
+                            <!-- <label for="checkbox_{{ sku }}"></label> -->
+                        </span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+            
+
+
+    </main>
+
+    <div id="panel" class="hidden">
+        <div id="listing">
+            <p class="entry">1: cm 25 x 12,5 x 2,3, Spina di pesce, Colori misti, Spazzolato</p>
+        </div>
+    </div>
+
+    <!-- <div id="dummy">Dummy</div> -->
+        
+    <script src="/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    
+    <footer>Design © 2021 Vittorio Minuzzo</footer>
+
+
+</html>

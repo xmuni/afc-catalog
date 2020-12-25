@@ -1,0 +1,17 @@
+{
+    "P01": {
+        "Dimensione": ["cm 25 x 12,5 x 2,3", "cm 30 x 15 x 2,3", "cm 50 x 20 x 3"],
+        "Posa": ["Parallela", "Lisca di pesce"],
+        "Finitura": ["Spazzolato, Levigato, Grezzo"],
+        "Colorazione": ["Colori misti", "Rosato", "Paglierino", "Altro"],
+        "default": ["cm 30 x 15 x 2,3", "Lisca di pesce", "Levigato", "Colori misti"]
+    },
+    "P02": {
+        "Dimensione": ["cm 25 x 12,5 x 2,3", "cm 30 x 15 x 2,3", "cm 50 x 20 x 3"],
+        "Posa": ["Parallela", "Lisca di pesce"],
+        "Finitura": ["Spazzolato, Levigato, Grezzo"],
+        "Colorazione": ["Colori misti", "Rosato", "Paglierino", "Altro"],
+        "default": ["cm 30 x 15 x 2,3", "Lisca di pesce", "Spazzolato", "Colori misti"]
+    },
+}
+
