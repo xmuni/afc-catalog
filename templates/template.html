@@ -52,8 +52,8 @@
             {% for i in range(floors|length) %}
             <div class="box">
                 <div class="img-container">
-                    <a data-fancybox="gallery" href="/{{ path }}/{{ floors[i] }}">
-                        <img src="/{{ path }}/{{ floors[i] }}" alt="">
+                    <a data-fancybox="gallery" href="{{ path }}/{{ floors[i] }}">
+                        <img src="{{ path }}/{{ floors[i] }}" alt="">
                     </a>
                 </div>
                 <div class="caption">
@@ -111,7 +111,7 @@
                     <div class="cell">
                     {% for value in item[header] %}
                         {% if header == 'img' %}
-                            <a data-fancybox="gallery" data-caption="{{ item[art] }}" href="/img/singles/{{ value }}"><img src="/img/singles/{{ value }}" alt=""></a>
+                            <a data-fancybox="gallery" data-caption="{{ item[art] }}" href="img/singles/{{ value }}"><img src="img/singles/{{ value }}" alt=""></a>
                         {% else %}
                             <span class="{% if header == 'cod_art' %}sku{% endif %}">{{ value }}</span>
                         {% endif %}
@@ -143,7 +143,7 @@
 
     <!-- <div id="dummy">Dummy</div> -->
         
-    <script src="/main.js"></script>
+    <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     
