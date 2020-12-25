@@ -548,10 +548,12 @@ header {
 #listing .entry {
     padding: 1rem;
     min-width: 10rem;
+    height: 100%;
     font-size: .9rem;
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: flex-end;
     text-align: center;
     border-radius: .5rem;
 }
@@ -562,7 +564,7 @@ header {
 
 #listing .entry a {
     max-width: 80px;
-    max-height: 100%;
+    max-height: 80px;
 }
 
 #listing .entry a img {
@@ -572,6 +574,10 @@ header {
     cursor: zoom-in;
     /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
     /* border: 1px solid black; */
+}
+
+#listing .entry .description {
+    padding-top: 10px;
 }
 
 

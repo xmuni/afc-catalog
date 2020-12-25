@@ -56,8 +56,10 @@ function RefreshMenu()
 
             var chosen_options = [];
             selects.forEach(select => {
-                var chosen_option = select.options[select.selectedIndex].text; // or value
-                chosen_options.push(chosen_option);
+                chosen_options.push({
+                    "index": select.selectedIndex,
+                    "text": select.options[select.selectedIndex].text
+                });
             });
 
             var box_name = box.querySelector(".floor-name").innerText;
@@ -83,6 +85,10 @@ function RefreshMenu()
     // for(const [key,value] of Object.entries(box_values)) {
     box_values.forEach(values => {
         const {name,imgsrc,options} = values;
+        var options_text = [];
+        options.forEach(option => {
+            options_text.push(option["text"]);
+        });
 
         var img = document.createElement("img");
         img.setAttribute("src",imgsrc);
@@ -94,7 +100,7 @@ function RefreshMenu()
 
         var div = document.createElement("div");
         div.classList.add("description");
-        div.innerText = `${name}\n${options.join("\n")}`;
+        div.innerText = `${name}\n${options_text.join("\n")}`;
 
         var entry = document.createElement("div");
         entry.classList.add("entry");
@@ -109,4 +115,63 @@ function RefreshMenu()
     else
         document.querySelector("#panel").classList.remove("hidden");
 
+}
+
+function get_floor_attribute_index(name)
+{
+    for(var i=0; i<attributes_json.length; i++)
+    {
+        if(attributes_json[i]["name"] == name)
+            return i;
+    }
+    
+    return -1;
+}
+
+// Returns a string
+function num_to_hex(num,length)
+{
+    var hex = num.toString(16);
+
+    // Add leading zero
+    if(hex.length < length)
+        return "0"+hex;
+    else
+        return hex;
+}
+
+function make_code()
+{
+    var hex_strings = [];
+
+    box_values.forEach(box => {
+        var options = box_values["options"];
+
+        var attribute_index = get_floor_attribute_index(box["name"]);
+        // var attributes = attributes_json[i];
+        // console.log(attributes);
+
+        var box_hexes = [];
+
+        box_hexes.push(num_to_hex(attribute_index,2));
+        box["options"].forEach(option => {
+            // Only encode option if it's not the default
+            if(!attributes_json[attribute_index]["default"].includes(option["text"]))
+                box_hexes.push(num_to_hex(option["index"],1));
+        });
+
+        hex_strings.push(box_hexes.join(''));
+
+        // console.log(hex_strings);
+
+        /*
+        console.log(attribute_index, attributes_json[attribute_index]["name"]);
+        box["options"].forEach(option => {
+            console.log(option["index"], option["text"]);
+        });
+        console.log("--------")
+        */
+    });
+
+    console.log(hex_strings);
 }

@@ -28,6 +28,6 @@
             ["Finitura",     ["Spazzolato", "Levigato", "Grezzo"]],
             ["Colorazione",  ["Colori misti", "Rosato", "Paglierino", "Altro"]]
         ],
-        "default":      ["cm 30 x 15 x 2,3", "Lisca di pesce", "Spazzolato", "Colori misti"]
+        "default":      ["Medio (lato 12)", "Lisca di pesce", "Spazzolato", "Colori misti"]
     }
 ]
