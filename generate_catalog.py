@@ -59,7 +59,7 @@ if __name__ == "__main__":
         'header_translations':  header_translations,
     }
 
-    render_template('templates/template.html', output='docs/index.html', title='Articoli', **kwargs)
+    render_template('templates/template.html', output='./index.html', title='Articoli', **kwargs)
     print('OK')
 
 
