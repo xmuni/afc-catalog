@@ -1,17 +1,35 @@
-{
-    "P01": {
-        "Dimensione": ["cm 25 x 12,5 x 2,3", "cm 30 x 15 x 2,3", "cm 50 x 20 x 3"],
-        "Posa": ["Parallela", "Lisca di pesce"],
-        "Finitura": ["Spazzolato, Levigato, Grezzo"],
-        "Colorazione": ["Colori misti", "Rosato", "Paglierino", "Altro"],
-        "default": ["cm 30 x 15 x 2,3", "Lisca di pesce", "Levigato", "Colori misti"]
+[
+    {
+        "img":          "D01.jpg",
+        "name":         "Rettangolo",
+        "options": {
+            "Dimensione":   ["cm 25 x 12,5 x 2,3", "cm 30 x 15 x 2,3", "cm 50 x 20 x 3"],
+            "Posa":         ["Parallela", "Lisca di pesce"],
+            "Finitura":     ["Spazzolato", "Levigato", "Grezzo"],
+            "Colorazione":  ["Colori misti", "Rosato", "Paglierino", "Altro"]
+        },
+        "default":      ["cm 30 x 15 x 2,3", "Lisca di pesce", "Levigato", "Colori misti"]
     },
-    "P02": {
-        "Dimensione": ["cm 25 x 12,5 x 2,3", "cm 30 x 15 x 2,3", "cm 50 x 20 x 3"],
-        "Posa": ["Parallela", "Lisca di pesce"],
-        "Finitura": ["Spazzolato, Levigato, Grezzo"],
-        "Colorazione": ["Colori misti", "Rosato", "Paglierino", "Altro"],
-        "default": ["cm 30 x 15 x 2,3", "Lisca di pesce", "Spazzolato", "Colori misti"]
+    {
+        "img":          "D08.jpg",
+        "name":         "Provenzale",
+        "options":      {
+            "Dimensione":   ["Medio (cm 27,5 x 20 x 2,3)", "Grande (cm 34,5 x 26 x 3)"],
+            "Posa":         [],
+            "Finitura":     ["Spazzolato", "Levigato"],
+            "Colorazione":  ["Colori misti", "Rosato", "Paglierino", "Altro"]
+        },
+        "default":      ["Medio (cm 27,5 x 20 x 2,3)", "Spazzolato", "Colori misti"]
     },
-}
-
+    {
+        "img":          "D11.jpg",
+        "name":         "Esagono",
+        "options":      {
+            "Dimensione":   ["Piccolo (lato 6,5)", "Medio (lato 12)", "Grande (lato 18)"],
+            "Posa":         [],
+            "Finitura":     ["Spazzolato", "Levigato", "Grezzo"],
+            "Colorazione":  ["Colori misti", "Rosato", "Paglierino", "Altro"]
+        },
+        "default":      ["cm 30 x 15 x 2,3", "Lisca di pesce", "Spazzolato", "Colori misti"]
+    }
+]

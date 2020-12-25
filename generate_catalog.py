@@ -1,6 +1,7 @@
 from jinja_renderer import render_template
 from parse_csv import parse_csv
 import os
+import json
 
 
 
@@ -13,7 +14,7 @@ def get_imagenames(path):
 
 
 
-if __name__ == "__main__":
+def Main():
 
     headers = ['img','n.','art.','dim']
 
@@ -50,14 +51,23 @@ if __name__ == "__main__":
 
     headers,items_rows = parse_csv('./items.csv')
 
+    listed_floors = {}
+    with open('./attributes.json', 'r+', encoding='UTF-8') as file:
+        listed_floors = json.loads(file.read())
+
     kwargs = {
         'headers':              headers,
         'items':                items_rows,
         'floors':               ['Depliant',    'img/floors/depliant',      get_imagenames('img/floors/depliant')],
         'floors_unlisted':      ['Non depliant','img/floors/not-depliant',  get_imagenames('img/floors/not-depliant')],
-        'floors_main':          ['Principali',  'img/floors/main',          get_imagenames('img/floors/main')],
+        'floors_main':          ['Pavimenti',  'img/floors/main',          get_imagenames('img/floors/main')],
+        'listed_floors':        listed_floors,
         'header_translations':  header_translations,
     }
+
+    # print('Listed floors:')
+    # print(kwargs['listed_floors'])
+    # return
 
     render_template('templates/template.html', output='./index.html', title='Articoli', **kwargs)
     print('OK')
@@ -78,3 +88,7 @@ if __name__ == "__main__":
 
         {% endfor %}
     '''
+
+
+if __name__ == "__main__":
+    Main()

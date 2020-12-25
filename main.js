@@ -64,6 +64,11 @@ function RefreshMenu()
 
         var img = document.createElement("img");
         img.setAttribute("src",imgsrc);
+        
+        var a = document.createElement("a");
+        a.setAttribute("data-fancybox", "gallery");
+        a.setAttribute("href", imgsrc);
+        a.appendChild(img);
 
         var div = document.createElement("div");
         div.classList.add("description");
@@ -72,7 +77,7 @@ function RefreshMenu()
         var entry = document.createElement("div");
         entry.classList.add("entry");
         entry.appendChild(div);
-        entry.appendChild(img);
+        entry.appendChild(a);
 
         listing.appendChild(entry);
     });

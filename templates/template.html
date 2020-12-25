@@ -44,11 +44,12 @@
 
     <main>
 
-        {% for header,path,floors in [floors, floors_unlisted, floors_main] %}
+        <!-- for header,path,floors in [floors, floors_unlisted, floors_main] -->
+        {% for header,path,floors in [floors_main] %}
 
         <h2>{{ header }}</h2>
 
-        <div id="floors" class="">
+        <div class="floors">
             {% for i in range(floors|length) %}
             <div class="box">
                 <div class="img-container">
@@ -71,14 +72,13 @@
                     <select id="dropdown_laying_{{ i+1 }}">
                         <option value="0">Spina di pesce</option>
                         <option value="1">Parallela</option>
-                        <option value="2">Altro</option>
                     </select>
                     <label for="dropdown_color_{{ i+1 }}">Colorazione:</label>
                     <select id="dropdown_color_{{ i+1 }}">
                         <option value="0">Colori misti</option>
                         <option value="1">Rosato</option>
                         <option value="2">Paglierino</option>
-                        <option value="3">Altro</option>
+                        <option value="3">Altro (a richiesta)</option>
                     </select>
                     <label for="dropdown_finish_{{ i+1 }}">Finitura:</label>
                     <select id="dropdown_finish_{{ i+1 }}">
@@ -93,6 +93,59 @@
         </div>
 
         {% endfor %}
+
+
+
+
+
+
+
+        
+        <h2>Pavimenti (ok)</h2>
+
+        <div class="floors">
+            {% for floor in listed_floors %}
+            <div class="box">
+                <div class="img-container">
+                    <a data-fancybox="gallery" href="img/floors/main/{{ floor['img'] }}">
+                        <img src="img/floors/main/{{ floor['img'] }}" alt="">
+                    </a>
+                </div>
+                <div class="caption">
+                    <span class="floor-name">{{ floor['name'] }}</span>
+                    <input type="checkbox" class="simple-custom-checkbox pin-to-corner"/>
+                </div>
+                <div class="floormenu">
+
+                    {% for label,values in floor['options'].items() %}
+                    {% if values|length > 0 %}
+
+                        <label for="option_{{ floor['name'] }}">{{ label }}:</label>
+                        <select id="option_{{ floor['name'] }}">
+                            {% for i in range(values|length) %}
+                            <option value="{{ i }}" {% if values[i] in floor['default'] %} selected {% endif %}>
+                                {{ values[i] }}
+                            </option>
+                            {% endfor %}
+                        </select>
+
+                    {% endif %}
+                    {% endfor %}
+                </div>
+
+            </div>
+            {% endfor %}
+
+        </div>
+
+
+
+
+
+
+
+
+
 
         <h2>Mattoni e articoli singoli</h2>
         
