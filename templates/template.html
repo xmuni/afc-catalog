@@ -6,7 +6,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="/main.css">
 
     <!-- Fancybox -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
@@ -28,7 +28,7 @@
 	<!-- Header -->
     <header id="header">
 		<a id="header-content" href="#">
-			<img src="../img/afc-logo-small.png" alt="Header logo">
+			<img src="img/afc-logo-small.png" alt="Header logo">
 			<div id="titles">
 				<h2><div class="c1">Antica Fornace</div><div class="c2">Carraro</div></h2>
 				<h3 class="line-decorate">
@@ -52,8 +52,8 @@
             {% for i in range(floors|length) %}
             <div class="box">
                 <div class="img-container">
-                    <a data-fancybox="gallery" href="../{{ path }}/{{ floors[i] }}">
-                        <img src="../{{ path }}/{{ floors[i] }}" alt="">
+                    <a data-fancybox="gallery" href="/{{ path }}/{{ floors[i] }}">
+                        <img src="/{{ path }}/{{ floors[i] }}" alt="">
                     </a>
                 </div>
                 <div class="caption">
@@ -111,7 +111,7 @@
                     <div class="cell">
                     {% for value in item[header] %}
                         {% if header == 'img' %}
-                            <a data-fancybox="gallery" data-caption="{{ item[art] }}" href="../img/singles/{{ value }}"><img src="../img/singles/{{ value }}" alt=""></a>
+                            <a data-fancybox="gallery" data-caption="{{ item[art] }}" href="/img/singles/{{ value }}"><img src="/img/singles/{{ value }}" alt=""></a>
                         {% else %}
                             <span class="{% if header == 'cod_art' %}sku{% endif %}">{{ value }}</span>
                         {% endif %}
