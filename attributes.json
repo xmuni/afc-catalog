@@ -15,7 +15,6 @@
         "name":         "Provenzale",
         "options":      [
             ["Dimensione",   ["Medio (cm 27,5 x 20 x 2,3)", "Grande (cm 34,5 x 26 x 3)"]],
-            ["Posa",         []],
             ["Finitura",     ["Spazzolato", "Levigato"]],
             ["Colorazione",  ["Colori misti", "Rosato", "Paglierino", "Altro"]]
         ],
@@ -26,7 +25,6 @@
         "name":         "Esagono",
         "options":      [
             ["Dimensione",   ["Piccolo (lato 6,5)", "Medio (lato 12)", "Grande (lato 18)"]],
-            ["Posa",         []],
             ["Finitura",     ["Spazzolato", "Levigato", "Grezzo"]],
             ["Colorazione",  ["Colori misti", "Rosato", "Paglierino", "Altro"]]
         ],

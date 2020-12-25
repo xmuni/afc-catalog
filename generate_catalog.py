@@ -50,6 +50,7 @@ def Main():
     }
 
     headers,items_rows = parse_csv('./items.csv')
+    print('[OK] CSV parsed')
 
     listed_floors = {}
     with open('./attributes.json', 'r+', encoding='UTF-8') as file:
@@ -70,7 +71,7 @@ def Main():
     # return
 
     render_template('templates/template.html', output='./index.html', title='Articoli', **kwargs)
-    print('OK')
+    print('[OK] Template rendered')
 
 
     '''

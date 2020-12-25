@@ -117,7 +117,7 @@
                 </div>
                 <div class="floormenu">
 
-                    {% for label,values in floor['options'].items() %}
+                    {% for label,values in floor['options'] %}
                     {% if values|length > 0 %}
 
                         <label for="option_{{ floor['name'] }}">{{ label }}:</label>

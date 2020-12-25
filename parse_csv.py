@@ -29,18 +29,18 @@ def parse_csv(csv_path):
             if first:
                 headers = row
                 first = False
-                print('Headers:',headers)
+                # print('Headers:',headers)
                 buffer = [[] for _ in range(len(headers))]
 
             elif row_is_empty(row):
-                print('Empty row. Saving buffer')
+                # print('Empty row. Saving buffer')
                 # print(type(row))
                 # print(row)
                 new_item = {}
                 for i in range(len(buffer)):
                     new_item[headers[i]] = buffer[i]
                 item_rows.append(new_item)
-                print('Row saved:',new_item)
+                # print('Row saved:',new_item)
                 buffer = [[] for _ in range(len(headers))]
 
             else:
@@ -55,9 +55,9 @@ def parse_csv(csv_path):
             new_item[headers[i]] = buffer[i]
         item_rows.append(new_item)
         
-        print('-'*10)
-        for item_row in item_rows:
-            print(item_row)
+        # print('-'*10)
+        # for item_row in item_rows:
+        #     print(item_row)
 
         return [headers,item_rows]
 

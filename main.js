@@ -11,9 +11,9 @@ Main();
 
 function Main()
 {
-    console.log("Main");
+    // console.log("Main");
     var checkboxes = document.querySelectorAll(".box input.simple-custom-checkbox");
-    console.log(checkboxes);
+    // console.log(checkboxes);
 
     checkboxes.forEach(checkbox => {
         checkbox.addEventListener("click", RefreshMenu);
@@ -24,6 +24,8 @@ function Main()
     });
 
     RefreshMenu();
+
+    fetch_json("https://xmuni.github.io/afc-catalog/attributes.json");
 }
 
 
