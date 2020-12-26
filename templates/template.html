@@ -44,93 +44,36 @@
 
     <main>
 
-        <!-- for header,path,floors in [floors, floors_unlisted, floors_main] -->
-        {% for header,path,floors in [floors_main] %}
-
-        <h2>{{ header }}</h2>
+        <h2>Pavimenti</h2>
 
         <div class="floors">
             {% for i in range(floors|length) %}
             <div class="box">
                 <div class="img-container">
-                    <a data-fancybox="gallery" href="{{ path }}/{{ floors[i] }}">
-                        <img src="{{ path }}/{{ floors[i] }}" alt="">
+                    <a data-fancybox="gallery" href="img/floors/main/{{ floors[i]['img'] }}">
+                        <img src="img/floors/main/{{ floors[i]['img'] }}" alt="">
                     </a>
                 </div>
                 <div class="caption">
-                    <span class="floor-name">{{ i+1 }}</span>
-                    <input type="checkbox" class="simple-custom-checkbox pin-to-corner"/>
-                </div>
-                <div class="floormenu">
-                    <label for="dropdown_size_{{ i+1 }}">Dimensione:</label>
-                    <select id="dropdown_size_{{ i+1 }}">
-                        <option value="0">cm 25 x 12,5 x 2,3</option>
-                        <option value="1">cm 30 x 15 x 2,3</option>
-                        <option value="1">cm 50 x 20 x 3</option>
-                    </select>
-                    <label for="dropdown_laying_{{ i+1 }}">Posa:</label>
-                    <select id="dropdown_laying_{{ i+1 }}">
-                        <option value="0">Spina di pesce</option>
-                        <option value="1">Parallela</option>
-                    </select>
-                    <label for="dropdown_color_{{ i+1 }}">Colorazione:</label>
-                    <select id="dropdown_color_{{ i+1 }}">
-                        <option value="0">Colori misti</option>
-                        <option value="1">Rosato</option>
-                        <option value="2">Paglierino</option>
-                        <option value="3">Altro (a richiesta)</option>
-                    </select>
-                    <label for="dropdown_finish_{{ i+1 }}">Finitura:</label>
-                    <select id="dropdown_finish_{{ i+1 }}">
-                        <option value="0">Spazzolato</option>
-                        <option value="1">Levigato</option>
-                        <option value="2">Grezzo</option>
-                    </select>
-                </div>
-
-            </div>
-            {% endfor %}
-        </div>
-
-        {% endfor %}
-
-
-
-
-
-
-
-        
-        <h2>Pavimenti (ok)</h2>
-
-        <div class="floors">
-            {% for floor in listed_floors %}
-            <div class="box">
-                <div class="img-container">
-                    <a data-fancybox="gallery" href="img/floors/main/{{ floor['img'] }}">
-                        <img src="img/floors/main/{{ floor['img'] }}" alt="">
-                    </a>
-                </div>
-                <div class="caption">
-                    <span class="floor-name">{{ floor['name'] }}</span>
-                    <input type="checkbox" class="simple-custom-checkbox pin-to-corner"/>
+                    <span class="floor-name">{{ floors[i]['name'] }}</span>
+                    <input data-floornum="{{ i }}" type="checkbox" class="simple-custom-checkbox pin-to-corner"/>
                 </div>
                 <div class="floormenu">
 
-                    {% for label,values in floor['options'] %}
-                    {% if values|length > 0 %}
+                    {% if floors[i]['options']|length > 0 %}
+                    {% for option in floors[i]['options'] %}
 
-                        <label for="option_{{ floor['name'] }}">{{ label }}:</label>
-                        <select id="option_{{ floor['name'] }}">
-                            {% for i in range(values|length) %}
-                            <option value="{{ i }}" {% if values[i] in floor['default'] %} selected {% endif %}>
-                                {{ values[i] }}
+                        <label for="option_{{ i }}">{{ option['label'] }}:</label>
+                        <select id="option_{{ i }}">
+                            {% for j in range(option['values']|length) %}
+                            <option value="{{ j }}" {% if j == option['default'] %} selected {% endif %}>
+                                {{ option['values'][j] }}
                             </option>
                             {% endfor %}
                         </select>
 
-                    {% endif %}
                     {% endfor %}
+                    {% endif %}
                 </div>
 
             </div>

@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Rettangolo",
+        "img":  "D01.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": ["cm 25 x 12,5 x 2,3", "cm 30 x 15 x 2,3", "cm 50 x 20 x 3"],
+                "default": 0
+            },
+            {
+                "label": "Posa",
+                "values": ["Parallela", "Lisca di pesce"],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": ["Spazzolato", "Levigato", "Grezzo"],
+                "default": 0
+            },
+            {
+                "label": "Colorazione",
+                "values": ["Colori misti", "Rosato", "Paglierino", "Altro"],
+                "default": 0
+            }
+        ]
+    },
+    {
+        "name": "Provenzale",
+        "img":  "D08.jpg",
+        "options":      [
+            {
+                "label": "Dimensione",
+                "values": ["Medio (cm 27,5 x 20 x 2,3)", "Grande (cm 34,5 x 26 x 3)"],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": ["Spazzolato", "Levigato"],
+                "default": 1
+            },
+            {
+                "label": "Colorazione",
+                "values": ["Colori misti", "Rosato", "Paglierino", "Altro"],
+                "default": 2
+            }
+        ]
+    }
+]

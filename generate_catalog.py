@@ -52,17 +52,10 @@ def Main():
     headers,items_rows = parse_csv('./items.csv')
     print('[OK] CSV parsed')
 
-    listed_floors = {}
-    with open('./attributes.json', 'r+', encoding='UTF-8') as file:
-        listed_floors = json.loads(file.read())
-
     kwargs = {
         'headers':              headers,
         'items':                items_rows,
-        'floors':               ['Depliant',    'img/floors/depliant',      get_imagenames('img/floors/depliant')],
-        'floors_unlisted':      ['Non depliant','img/floors/not-depliant',  get_imagenames('img/floors/not-depliant')],
-        'floors_main':          ['Pavimenti',  'img/floors/main',          get_imagenames('img/floors/main')],
-        'listed_floors':        listed_floors,
+        'floors':               json.loads(open('./attributes_new.json', 'r+', encoding='UTF-8').read()),
         'header_translations':  header_translations,
     }
 

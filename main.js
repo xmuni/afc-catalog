@@ -25,7 +25,8 @@ function Main()
 
     RefreshMenu();
 
-    fetch_json("https://xmuni.github.io/afc-catalog/attributes.json");
+    console.log("OK");
+    fetch_json("https://xmuni.github.io/afc-catalog/attributes_new.json");
 }
 
 
@@ -140,6 +141,17 @@ function num_to_hex(num,length)
         return hex;
 }
 
+function get_option_index(text,array)
+{
+    console.log(text,array);
+    for(var i=0; i<array.length; i++)
+    {
+        if(array[i][0] == text)
+            return i;
+    }
+    return -1;
+}
+
 function make_code()
 {
     var hex_strings = [];
@@ -154,11 +166,25 @@ function make_code()
         var box_hexes = [];
 
         box_hexes.push(num_to_hex(attribute_index,2));
-        box["options"].forEach(option => {
+        for(var i=0; i<box["options"].length; i++)
+        // box["options"].forEach(option =>
+        {
+            var option = box["options"][i];
+            const chosen_index = option["index"];
+            const chosen_text = option["text"];
+
             // Only encode option if it's not the default
-            if(!attributes_json[attribute_index]["default"].includes(option["text"]))
+            // if(!attributes_json[attribute_index]["default"].includes(option["text"]))
+            if(true)
+            {
+                // Add index of option
+                console.log(i, option["index"], option["text"]);
+                // var option_index = get_option_index(chosen_text, attributes_json[attribute_index]["options"]);
+                box_hexes.push(i);
+                // Add index of chosen option value
                 box_hexes.push(num_to_hex(option["index"],1));
-        });
+            }
+        }
 
         hex_strings.push(box_hexes.join(''));
 
@@ -174,4 +200,7 @@ function make_code()
     });
 
     console.log(hex_strings);
+
+    const base_url = "https://xmuni.github.io/afc-catalog/request?v1=";
+    return base_url + hex_strings.join(';');
 }
