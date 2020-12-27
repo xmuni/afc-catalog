@@ -46,7 +46,7 @@
 
         <div class="floors">
             
-            <div class="box">
+            <div class="box" data-boxnum="0">
                 <div class="img-container">
                     <a data-fancybox="gallery" href="img/floors/main/D01.jpg">
                         <img src="img/floors/main/D01.jpg" alt="">
@@ -141,7 +141,7 @@
 
             </div>
             
-            <div class="box">
+            <div class="box" data-boxnum="1">
                 <div class="img-container">
                     <a data-fancybox="gallery" href="img/floors/main/D08.jpg">
                         <img src="img/floors/main/D08.jpg" alt="">
@@ -198,6 +198,86 @@
                             </option>
                             
                             <option value="2"  selected >
+                                Paglierino
+                            </option>
+                            
+                            <option value="3" >
+                                Altro
+                            </option>
+                            
+                        </select>
+
+                    
+                    
+                </div>
+
+            </div>
+            
+            <div class="box" data-boxnum="2">
+                <div class="img-container">
+                    <a data-fancybox="gallery" href="img/floors/main/D11.jpg">
+                        <img src="img/floors/main/D11.jpg" alt="">
+                    </a>
+                </div>
+                <div class="caption">
+                    <span class="floor-name">Esagono</span>
+                    <input data-floornum="2" type="checkbox" class="simple-custom-checkbox pin-to-corner"/>
+                </div>
+                <div class="floormenu">
+
+                    
+                    
+
+                        <label for="option_2">Dimensione:</label>
+                        <select id="option_2">
+                            
+                            <option value="0" >
+                                Piccolo (lato 6,5)
+                            </option>
+                            
+                            <option value="1"  selected >
+                                Medio (lato 12)
+                            </option>
+                            
+                            <option value="2" >
+                                Grande (lato 18)
+                            </option>
+                            
+                        </select>
+
+                    
+
+                        <label for="option_2">Finitura:</label>
+                        <select id="option_2">
+                            
+                            <option value="0"  selected >
+                                Spazzolato
+                            </option>
+                            
+                            <option value="1" >
+                                Levigato
+                            </option>
+                            
+                            <option value="2" >
+                                Grezzo
+                            </option>
+                            
+                        </select>
+
+                    
+
+                        <label for="option_2">Colorazione:</label>
+                        <select id="option_2">
+                            
+                            <option value="0"  selected >
+                                Colori misti
+                            </option>
+                            
+                            <option value="1" >
+                                Rosato
+                            </option>
+                            
+                            <option value="2" >
                                 Paglierino
                             </option>
                             
@@ -1081,9 +1161,15 @@
     </main>
 
     <div id="panel" class="hidden">
+        <div id="minimize"></div>
         <div id="listing">
             <p class="entry">1: cm 25 x 12,5 x 2,3, Spina di pesce, Colori misti, Spazzolato</p>
         </div>
+        <a id="floor-link" href="" target="_blank">
+            <span id="url-base"></span>
+            <span id="url-query"></span>
+            <span class="new-tab"></span>
+        </a>
     </div>
 
     <!-- <div id="dummy">Dummy</div> -->
@@ -1092,7 +1178,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     
-    <footer>Design © 2021 Vittorio Minuzzo</footer>
+    <footer>Design e realizzazione © 2021 Vittorio Minuzzo</footer>
 
 
 </html>

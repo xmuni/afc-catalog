@@ -48,7 +48,7 @@
 
         <div class="floors">
             {% for i in range(floors|length) %}
-            <div class="box">
+            <div class="box" data-boxnum="{{ i }}">
                 <div class="img-container">
                     <a data-fancybox="gallery" href="img/floors/main/{{ floors[i]['img'] }}">
                         <img src="img/floors/main/{{ floors[i]['img'] }}" alt="">
@@ -132,9 +132,15 @@
     </main>
 
     <div id="panel" class="hidden">
+        <div id="minimize"></div>
         <div id="listing">
             <p class="entry">1: cm 25 x 12,5 x 2,3, Spina di pesce, Colori misti, Spazzolato</p>
         </div>
+        <a id="floor-link" href="" target="_blank">
+            <span id="url-base"></span>
+            <span id="url-query"></span>
+            <span class="new-tab"></span>
+        </a>
     </div>
 
     <!-- <div id="dummy">Dummy</div> -->
@@ -143,7 +149,7 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
     
-    <footer>Design © 2021 Vittorio Minuzzo</footer>
+    <footer>Design e realizzazione © 2021 Vittorio Minuzzo</footer>
 
 
 </html>

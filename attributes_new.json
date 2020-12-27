@@ -45,5 +45,26 @@
                 "default": 2
             }
         ]
+    },
+    {
+        "name":         "Esagono",
+        "img":          "D11.jpg",
+        "options":      [
+            {
+                "label":    "Dimensione",
+                "values":   ["Piccolo (lato 6,5)", "Medio (lato 12)", "Grande (lato 18)"],
+                "default":  1
+            },
+            {
+                "label":    "Finitura",
+                "values":   ["Spazzolato", "Levigato", "Grezzo"],
+                "default":  0
+            },
+            {
+                "label":    "Colorazione",
+                "values":   ["Colori misti", "Rosato", "Paglierino", "Altro"],
+                "default":  0
+            }
+        ]
     }
 ]

@@ -525,6 +525,7 @@ header {
     min-width: 100px;
     padding: 1.5rem;
     display: flex;
+    flex-direction: column;
     border-top-left-radius: .6rem;
     border-top-right-radius: .6rem;
     box-shadow: 0 0 25px 25px rgba(0, 0, 0, 0.1);
@@ -543,6 +544,7 @@ header {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    justify-content: space-around;
 }
 
 #listing .entry {
@@ -578,6 +580,64 @@ header {
 
 #listing .entry .description {
     padding-top: 10px;
+}
+
+#floor-link {
+    background: rgb(49, 128, 201);
+    border-radius: 5px;
+    min-height: 1rem;
+    min-width: 5rem;
+    margin-top: 1rem;
+    padding: .5rem .8rem;
+    padding-right: 1rem;
+    color: white;
+    /* border-bottom: 1px solid white; */
+    text-decoration: underline;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+#floor-link #url-base {
+    opacity: 0.8;
+}
+
+#panel #minimize {
+    background-image: url("img/collapse.png");
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    /* transition: 0.5s; */
+}
+
+#panel.minimized #listing {
+    display: none;
+    transition: 0.2s;
+}
+
+#panel.minimized {
+    padding-top: .5rem;
+    padding-right: 3rem;
+}
+
+#panel.minimized #minimize {
+    rotate: 180deg;
+    /* transition: 0.5s; */
+}
+
+.new-tab {
+    display: inline-block;
+    background-image: url("img/new_tab.svg");
+    background-size: contain;
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 4px;
+    right: 4px;
 }
 
 

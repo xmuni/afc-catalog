@@ -4,6 +4,8 @@
 var checkboxes = [];
 var box_values = [];
 
+const base_url = "https://xmuni.github.io/afc-catalog/request?";
+
 var attributes_json = [];
 
 Main();
@@ -25,8 +27,15 @@ function Main()
 
     RefreshMenu();
 
-    console.log("OK");
     fetch_json("https://xmuni.github.io/afc-catalog/attributes_new.json");
+
+    document.querySelector("#minimize").addEventListener("click", function() {
+        var panel = document.querySelector("#panel");
+        if(panel.classList.contains("minimized"))
+            panel.classList.remove("minimized");
+        else
+            panel.classList.add("minimized");
+    });
 }
 
 
@@ -37,7 +46,8 @@ function fetch_json(url)
 			return response.json();
 		})
 		.then(function(data) {
-			attributes_json = data;
+            attributes_json = data;
+            RefreshMenu();
 			// localStorage.setItem(flname,JSON.stringify(data));
 		})
 		.catch(error => console.error(error))
@@ -67,6 +77,7 @@ function RefreshMenu()
             var imgsrc = box.querySelector("a img").getAttribute("src");
             // console.log(box_name, chosen_options);
             box_values.push({
+                "index": parseInt(box.getAttribute("data-boxnum")),
                 "name": box_name,
                 "imgsrc": imgsrc,
                 "options": chosen_options,
@@ -116,6 +127,13 @@ function RefreshMenu()
     else
         document.querySelector("#panel").classList.remove("hidden");
 
+    if(attributes_json)
+    {
+        const query_code = make_code();
+        document.querySelector("#url-base").innerText = base_url;
+        document.querySelector("#url-query").innerText = query_code;
+        document.querySelector("#floor-link").setAttribute("href",base_url+query_code);
+    }
 }
 
 function get_floor_attribute_index(name)
@@ -159,13 +177,14 @@ function make_code()
     box_values.forEach(box => {
         var options = box_values["options"];
 
-        var attribute_index = get_floor_attribute_index(box["name"]);
+        // var attribute_index = get_floor_attribute_index(box["name"]);
+        var index = box["index"];
         // var attributes = attributes_json[i];
         // console.log(attributes);
 
         var box_hexes = [];
 
-        box_hexes.push(num_to_hex(attribute_index,2));
+        box_hexes.push(num_to_hex(index,2));
         for(var i=0; i<box["options"].length; i++)
         // box["options"].forEach(option =>
         {
@@ -175,7 +194,8 @@ function make_code()
 
             // Only encode option if it's not the default
             // if(!attributes_json[attribute_index]["default"].includes(option["text"]))
-            if(true)
+            if(attributes_json.length==0 || attributes_json[index]["default"] != chosen_index)
+            // if(true)
             {
                 // Add index of option
                 console.log(i, option["index"], option["text"]);
@@ -201,6 +221,5 @@ function make_code()
 
     console.log(hex_strings);
 
-    const base_url = "https://xmuni.github.io/afc-catalog/request?v1=";
-    return base_url + hex_strings.join(';');
+    return "v1=" + hex_strings.join(';');
 }
