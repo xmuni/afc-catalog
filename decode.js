@@ -36,13 +36,13 @@ function Load()
     var chosen_floor_options = {};
 
     floors.forEach(string => {
-        // Convert hex to decimal
-        var floor_type = parseInt(string.slice(0,2));
+
+        var floor_type = parseInt(string.slice(0,2),16); // Convert hex to decimal
         var options_str = "";
         if(string.length > 3)
             options_str = string.slice(2);
 
-        console.log(floor_type,options_str);
+        console.log("Floor index (decimal):", floor_type, "Options:", options_str);
 
         chosen_floor_options[floor_type] = {
             "name": attributes_json[floor_type]["name"],
@@ -56,6 +56,8 @@ function Load()
                 "value": option["values"][option["default"]],
             });
         });
+
+        console.log(attributes_json[floor_type]);
 
         // console.log("Chosen floor options");
         // console.log(chosen_floor_options);
@@ -108,7 +110,8 @@ function Load()
     decoded_listing.innerText = "";
 
     for(const [key,value] of Object.entries(chosen_floor_options)) {
-        decoded_listing.innerText += key;
+        decoded_listing.innerText += "\n";
+        decoded_listing.innerText += value["name"];
         decoded_listing.innerText += "\n";
         value["options"].forEach(option => {
             decoded_listing.innerText += `${option["label"]}: ${option["value"]}\n`;
