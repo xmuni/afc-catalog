@@ -107,6 +107,10 @@ main {
     cursor: zoom-in;
 }
 
+span.floor-name {
+    font-size: 0.9rem;
+}
+
 
 /******* Mouseover pop-up for floor selection ******/
 
@@ -584,6 +588,7 @@ header {
 }
 
 #floor-link {
+    align-self: center;
     background: rgb(49, 128, 201);
     border-radius: 5px;
     min-height: 1rem;

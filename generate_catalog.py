@@ -1,5 +1,5 @@
 from jinja_renderer import render_template
-from parse_csv import parse_csv
+from parse_csv import parse_csv, parse_floors_csv
 import os
 import json
 
@@ -49,8 +49,11 @@ def Main():
         'select':   'Seleziona',
     }
 
+    parse_floors_csv('./floors.csv')
+    print('[OK] Floors CSV parsed --> attributes_new.json')
+
     headers,items_rows = parse_csv('./items.csv')
-    print('[OK] CSV parsed')
+    print('[OK] Items CSV parsed')
 
     kwargs = {
         'headers':              headers,

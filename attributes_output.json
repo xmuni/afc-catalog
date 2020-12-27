@@ -42,6 +42,48 @@
         ]
     },
     {
+        "name": "Rettangolo",
+        "img": "D06 26x12.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": [
+                    "cm 25 x 12.jpg",
+                    "cm 30 x 15.jpg",
+                    "cm 50 x 20.jpg"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Posa",
+                "values": [
+                    "Parallela",
+                    "Lisca di pesce"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": [
+                    "Spazzolato",
+                    "Levigato",
+                    "Grezzo"
+                ],
+                "default": 1
+            },
+            {
+                "label": "Colorazione",
+                "values": [
+                    "Colori misti",
+                    "Rosato",
+                    "Paglierino",
+                    "Altro"
+                ],
+                "default": 1
+            }
+        ]
+    },
+    {
         "name": "Listelli",
         "img": "D04.jpg",
         "options": [
@@ -78,12 +120,12 @@
                     "Paglierino",
                     "Altro"
                 ],
-                "default": 0
+                "default": 2
             }
         ]
     },
     {
-        "name": "Tavelle quadrate",
+        "name": "Quadrati",
         "img": "D13.jpg",
         "options": [
             {
@@ -117,7 +159,7 @@
         ]
     },
     {
-        "name": "Tavelle quadrate",
+        "name": "Quadrati",
         "img": "N13.jpg",
         "options": [
             {
@@ -151,7 +193,7 @@
         ]
     },
     {
-        "name": "Tavelle quadrate",
+        "name": "Quadrati",
         "img": "D16.jpg",
         "options": [
             {
@@ -237,6 +279,102 @@
                     "Grezzo"
                 ],
                 "default": 0
+            },
+            {
+                "label": "Colorazione",
+                "values": [
+                    "Colori misti",
+                    "Rosato",
+                    "Paglierino",
+                    "Altro"
+                ],
+                "default": 0
+            }
+        ]
+    },
+    {
+        "name": "Quadrifoglio",
+        "img": "D09.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": [
+                    "cm 23 x 23 x 2,5"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": [
+                    "Spazzolato",
+                    "Levigato",
+                    "Grezzo"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Colorazione",
+                "values": [
+                    "Colori misti",
+                    "Rosato",
+                    "Paglierino",
+                    "Altro"
+                ],
+                "default": 0
+            }
+        ]
+    },
+    {
+        "name": "Composizione 10",
+        "img": "D10.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": [
+                    "Quadrati 12 x 12"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": [
+                    "Spazzolato",
+                    "Levigato",
+                    "Grezzo"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Colorazione",
+                "values": [
+                    "Colori misti",
+                    "Rosato",
+                    "Paglierino",
+                    "Altro"
+                ],
+                "default": 0
+            }
+        ]
+    },
+    {
+        "name": "Composizione 14",
+        "img": "D14.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": [
+                    "Quadrati cm 18,5 x 18,5"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": [
+                    "Spazzolato",
+                    "Levigato",
+                    "Grezzo"
+                ],
+                "default": 1
             },
             {
                 "label": "Colorazione",

@@ -129,12 +129,11 @@ def parse_floors_csv(path):
     df = sheet.values
     # print(df)
 
-    print('Transposing csv table...')
+    # print('Transposing csv table...')
     df_transposed = df.transpose()
-    # print(df_transposed)
     rows,cols = df_transposed.shape
-    print('Rows:',rows)
-    print('Cols:',cols)
+    # print('Rows:',rows)
+    # print('Cols:',cols)
 
     '''
     # Testing
@@ -147,17 +146,16 @@ def parse_floors_csv(path):
 
     output = []
     for row in range(rows):
-        # print(row)
         row_sets = get_row(df_transposed,row)
         output.append(row_set_to_dic(row_sets))
-    print(output)
+    # print(output)
 
     jsontext = json.dumps(output, indent=4)
     # print(jsontext)
     filename_json = 'attributes_output.json'
     with open(filename_json, 'w+', encoding='UTF-8') as file:
         file.write(jsontext)
-        print('Json saved:', filename_json)
+        # print('Json saved:', filename_json)
 
 
 
@@ -165,4 +163,5 @@ def parse_floors_csv(path):
 
 if __name__ == "__main__":
     # parse_csv('items.csv')
+    print('Parsing floors csv')
     parse_floors_csv('floors.csv')
