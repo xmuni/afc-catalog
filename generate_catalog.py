@@ -55,7 +55,7 @@ def Main():
     kwargs = {
         'headers':              headers,
         'items':                items_rows,
-        'floors':               json.loads(open('./attributes_new.json', 'r+', encoding='UTF-8').read()),
+        'floors':               json.loads(open('./attributes_output.json', 'r+', encoding='UTF-8').read()),
         'header_translations':  header_translations,
     }
 
