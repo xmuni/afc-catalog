@@ -185,20 +185,19 @@ function make_code()
         var box_hexes = [];
 
         box_hexes.push(num_to_hex(index,2));
+
         for(var i=0; i<box["options"].length; i++)
-        // box["options"].forEach(option =>
         {
             var option = box["options"][i];
             const chosen_index = option["index"];
-            const chosen_text = option["text"];
 
             // Only encode option if it's not the default
             // if(!attributes_json[attribute_index]["default"].includes(option["text"]))
-            if(attributes_json.length==0 || attributes_json[index]["default"] != chosen_index)
+            if(attributes_json.length==0 || attributes_json[index]["options"][i]["default"] != chosen_index)
             // if(true)
             {
                 // Add index of option
-                console.log(i, option["index"], option["text"]);
+                // console.log(i, option["index"], option["text"]);
                 // var option_index = get_option_index(chosen_text, attributes_json[attribute_index]["options"]);
                 box_hexes.push(i);
                 // Add index of chosen option value
@@ -219,7 +218,7 @@ function make_code()
         */
     });
 
-    console.log(hex_strings);
+    // console.log(hex_strings);
 
     return "v1=" + hex_strings.join(';');
 }

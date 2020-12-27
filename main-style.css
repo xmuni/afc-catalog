@@ -524,6 +524,7 @@ header {
     z-index: 200;
     min-width: 100px;
     padding: 1.5rem;
+    padding-top: 2.5rem;
     display: flex;
     flex-direction: column;
     border-top-left-radius: .6rem;
