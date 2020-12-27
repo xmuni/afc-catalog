@@ -293,6 +293,39 @@
         ]
     },
     {
+        "name": "Rombo",
+        "img": "D07.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": [
+                    "???",
+                    "???"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": [
+                    "Spazzolato",
+                    "Levigato",
+                    "Grezzo"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Colorazione",
+                "values": [
+                    "Colori misti",
+                    "Rosato",
+                    "Paglierino",
+                    "Altro"
+                ],
+                "default": 0
+            }
+        ]
+    },
+    {
         "name": "Quadrifoglio",
         "img": "D09.jpg",
         "options": [
@@ -331,7 +364,7 @@
             {
                 "label": "Dimensione",
                 "values": [
-                    "Quadrati 12 x 12"
+                    "Quadrati cm 12"
                 ],
                 "default": 0
             },
@@ -363,7 +396,7 @@
             {
                 "label": "Dimensione",
                 "values": [
-                    "Quadrati cm 18,5 x 18,5"
+                    "Quadrati cm 18,5"
                 ],
                 "default": 0
             },
@@ -389,13 +422,45 @@
         ]
     },
     {
+        "name": "Composizione 15",
+        "img": "D15.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": [
+                    "Quadrati cm 20"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": [
+                    "Spazzolato",
+                    "Levigato",
+                    "Grezzo"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Colorazione",
+                "values": [
+                    "Colori misti",
+                    "Rosato",
+                    "Paglierino",
+                    "Altro"
+                ],
+                "default": 0
+            }
+        ]
+    },
+    {
         "name": "Composizione 17",
         "img": "D17.jpg",
         "options": [
             {
                 "label": "Dimensione",
                 "values": [
-                    "Quadrati cm 18,5 x 18,5"
+                    "Quadrati cm 18,5"
                 ],
                 "default": 0
             },
@@ -407,6 +472,71 @@
                     "Grezzo"
                 ],
                 "default": 1
+            },
+            {
+                "label": "Colorazione",
+                "values": [
+                    "Colori misti",
+                    "Rosato",
+                    "Paglierino",
+                    "Altro"
+                ],
+                "default": 0
+            }
+        ]
+    },
+    {
+        "name": "Composizione 18",
+        "img": "D18.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": [
+                    "Quadrati cm 18,5"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": [
+                    "Spazzolato",
+                    "Levigato",
+                    "Grezzo"
+                ],
+                "default": 1
+            },
+            {
+                "label": "Colorazione",
+                "values": [
+                    "Colori misti",
+                    "Rosato",
+                    "Paglierino",
+                    "Altro"
+                ],
+                "default": 0
+            }
+        ]
+    },
+    {
+        "name": "Ottagoni (comp. 20)",
+        "img": "D20.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": [
+                    "Ottagoni cm 8,5 (lato)",
+                    "Ottagoni cm 10,5 (lato)"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": [
+                    "Spazzolato",
+                    "Levigato",
+                    "Grezzo"
+                ],
+                "default": 0
             },
             {
                 "label": "Colorazione",
@@ -449,6 +579,51 @@
                     "Altro"
                 ],
                 "default": 1
+            }
+        ]
+    },
+    {
+        "name": "Composizione 38",
+        "img": "D38.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": [
+                    "Esagoni cm 6,5 (lato)"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": [
+                    "Spazzolato",
+                    "Levigato",
+                    "Grezzo"
+                ],
+                "default": 1
+            },
+            {
+                "label": "Colorazione",
+                "values": [
+                    "Colori misti",
+                    "Rosato",
+                    "Paglierino",
+                    "Altro"
+                ],
+                "default": 0
+            }
+        ]
+    },
+    {
+        "name": "Cotto e legno",
+        "img": "D23.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": [
+                    "Pannelli da 1 mq"
+                ],
+                "default": 0
             }
         ]
     }

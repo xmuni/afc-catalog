@@ -131,7 +131,7 @@ def parse_floors_csv(path):
 
     # print('Transposing csv table...')
     df_transposed = df.transpose()
-    rows,cols = df_transposed.shape
+    rows,_ = df_transposed.shape
     # print('Rows:',rows)
     # print('Cols:',cols)
 
