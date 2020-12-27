@@ -9,7 +9,7 @@ console.log("Decode main");
 
 function Main()
 {
-    fetch_json("https://xmuni.github.io/afc-catalog/attributes_new.json");
+    fetch_json("https://xmuni.github.io/afc-catalog/attributes_output.json");
 
 
     // Load();

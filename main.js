@@ -27,7 +27,7 @@ function Main()
 
     RefreshMenu();
 
-    fetch_json("https://xmuni.github.io/afc-catalog/attributes_new.json");
+    fetch_json("https://xmuni.github.io/afc-catalog/attributes_output.json");
 
     document.querySelector("#minimize").addEventListener("click", function() {
         var panel = document.querySelector("#panel");
