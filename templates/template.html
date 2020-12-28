@@ -47,21 +47,21 @@
         <h2>Pavimenti</h2>
 
         <div class="floors">
-            {% for i in range(floors|length) %}
-            <div class="box" data-boxnum="{{ i }}">
+            {% for floor in floors_enabled %}
+            <div class="box" data-floorid="{{ floor['id'] }}">
                 <div class="img-container">
-                    <a data-fancybox="gallery" href="img/floors/main/{{ floors[i]['img'] }}">
-                        <img src="img/floors/main/{{ floors[i]['img'] }}" alt="">
+                    <a data-fancybox="gallery" href="img/floors/main/{{ floor['img'] }}">
+                        <img src="img/floors/main/{{ floor['img'] }}" alt="">
                     </a>
                 </div>
                 <div class="caption">
-                    <span class="floor-name">{{ floors[i]['name'] }}</span>
-                    <input data-floornum="{{ i }}" type="checkbox" class="simple-custom-checkbox pin-to-corner"/>
+                    <span class="floor-name">{{ floor['name'] }}</span>
+                    <input data-floorid="{{ floor['id'] }}" type="checkbox" class="simple-custom-checkbox pin-to-corner"/>
                 </div>
                 <div class="floormenu">
 
-                    {% if floors[i]['options']|length > 0 %}
-                    {% for option in floors[i]['options'] %}
+                    {% if floor['options']|length > 0 %}
+                    {% for option in floor['options'] %}
 
                         <label for="option_{{ i }}">{{ option['label'] }}:</label>
                         <select id="option_{{ i }}">

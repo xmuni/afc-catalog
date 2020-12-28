@@ -551,6 +551,9 @@ header {
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
+    
+    /* max-width: 60vw; */
+    /* overflow: scroll; */
 }
 
 #listing .entry {

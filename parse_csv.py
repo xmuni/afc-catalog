@@ -95,8 +95,10 @@ def get_row(df,row):
 
 def row_set_to_dic(row_set):
     dic = {
-        "name": row_set[0][0],
-        "img": row_set[0][1],
+        "id": row_set[0][0],
+        "enabled": row_set[0][1].lower() == 'yes',
+        "name": row_set[0][2],
+        "img": row_set[0][3],
         "options": [],
     }
 
@@ -144,10 +146,11 @@ def parse_floors_csv(path):
     print(row_set_to_dic(row_sets))
     '''
 
-    output = []
+    output = {}
     for row in range(rows):
         row_sets = get_row(df_transposed,row)
-        output.append(row_set_to_dic(row_sets))
+        dic = row_set_to_dic(row_sets)
+        output[dic['id']] = dic
     # print(output)
 
     jsontext = json.dumps(output, indent=4)

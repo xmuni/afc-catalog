@@ -55,10 +55,19 @@ def Main():
     headers,items_rows = parse_csv('./items.csv')
     print('[OK] Items CSV parsed')
 
+
+    all_floors = json.loads(open('./attributes_output.json', 'r+', encoding='UTF-8').read())
+
+    floors_enabled = [value for _,value in all_floors.items() if value['enabled']]
+
+    print("[OK] Floors filtered by 'enabled'")
+    # print('Floors enabled:')
+    # print(floors_enabled)
+
     kwargs = {
         'headers':              headers,
         'items':                items_rows,
-        'floors':               json.loads(open('./attributes_output.json', 'r+', encoding='UTF-8').read()),
+        'floors_enabled':       floors_enabled,
         'header_translations':  header_translations,
     }
 

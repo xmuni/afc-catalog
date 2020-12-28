@@ -23,8 +23,9 @@ function Load()
     const query_string = window.location.search;
     console.log(query_string);
 
-    var version = query_string.split('=')[0].replace('?v','');
-    var floors = query_string.split('=')[1].split(';');
+    // var version = query_string.split('=')[0].replace('?v','');
+    // var floors = query_string.split('=')[1].split(';');
+    var floors = query_string.slice(1).split(';');
     
     // console.log(version);
     console.log(floors);

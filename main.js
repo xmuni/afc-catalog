@@ -77,7 +77,7 @@ function RefreshMenu()
             var imgsrc = box.querySelector("a img").getAttribute("src");
             // console.log(box_name, chosen_options);
             box_values.push({
-                "index": parseInt(box.getAttribute("data-boxnum")),
+                "id": box.getAttribute("data-floorid"),
                 "name": box_name,
                 "imgsrc": imgsrc,
                 "options": chosen_options,
@@ -153,8 +153,9 @@ function num_to_hex(num,length)
     var hex = num.toString(16);
 
     // Add leading zero
+    var length_difference = length - hex.length;
     if(hex.length < length)
-        return "0"+hex;
+        return "0".repeat(length_difference) + hex;
     else
         return hex;
 }
@@ -178,22 +179,23 @@ function make_code()
         var options = box_values["options"];
 
         // var attribute_index = get_floor_attribute_index(box["name"]);
-        var index = box["index"];
+        var floor_id = box["id"];
+        console.log("Floor id:",floor_id);
         // var attributes = attributes_json[i];
         // console.log(attributes);
 
         var box_hexes = [];
 
-        box_hexes.push(num_to_hex(index,2));
+        box_hexes.push(num_to_hex(floor_id,2));
 
         for(var i=0; i<box["options"].length; i++)
         {
             var option = box["options"][i];
-            const chosen_index = option["index"];
+            const chosen_index = option["id"];
 
             // Only encode option if it's not the default
             // if(!attributes_json[attribute_index]["default"].includes(option["text"]))
-            if(attributes_json.length==0 || attributes_json[index]["options"][i]["default"] != chosen_index)
+            if(attributes_json.length==0 || attributes_json[floor_id]["options"][i]["default"] != chosen_index)
             // if(true)
             {
                 // Add index of option
@@ -220,5 +222,5 @@ function make_code()
 
     // console.log(hex_strings);
 
-    return "v1=" + hex_strings.join(';');
+    return hex_strings.join(';');
 }
