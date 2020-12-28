@@ -137,6 +137,29 @@ span.floor-name {
     /* transition-duration: 0.5s; */
 }
 
+/*
+.box a {
+    z-index: inherit;
+}
+
+.box a::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30%;
+    height: 30%;
+    background: rgba(255, 255, 255, 0.5);
+    content: "";
+    opacity: 0;
+    transition: 0.2s;
+}
+*/
+
+.box:hover a::after {
+    opacity: 1;
+    transition: 0.2s;
+}
+
 .box:hover .floormenu {
     display: flex;
     opacity: 1;

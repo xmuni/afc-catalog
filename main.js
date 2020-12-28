@@ -181,7 +181,7 @@ function make_code()
 
         // var attribute_index = get_floor_attribute_index(box["name"]);
         var floor_id = box["id"];
-        console.log("Floor id:",typeof(floor_id),floor_id);
+        // console.log("Floor id:",typeof(floor_id),floor_id);
         // var attributes = attributes_json[i];
         // console.log(attributes);
 

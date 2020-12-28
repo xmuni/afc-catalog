@@ -107,7 +107,9 @@
                     <div class="cell">
                     {% for value in item[header] %}
                         {% if header == 'img' %}
-                            <a data-fancybox="gallery" data-caption="{{ item[art] }}" href="img/singles/{{ value }}"><img src="img/singles/{{ value }}" alt=""></a>
+                            <a data-fancybox="gallery" data-caption="{{ item[art] }}" href="img/singles/{{ value }}">
+                                <img src="img/singles/{{ value }}" alt="">
+                            </a>
                         {% else %}
                             <span class="{% if header == 'cod_art' %}sku{% endif %}">{{ value }}</span>
                         {% endif %}
