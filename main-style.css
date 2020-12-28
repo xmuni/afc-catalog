@@ -606,10 +606,12 @@ header {
     text-align: center;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     position: relative;
+    display: flex;
 }
 
 #floor-link #url-base {
     opacity: 0.8;
+    display: none;
 }
 
 #panel #minimize {

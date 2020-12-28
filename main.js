@@ -6,7 +6,7 @@ var box_values = [];
 
 const base_url = "https://xmuni.github.io/afc-catalog/request?";
 
-var attributes_json = [];
+var attributes_json = {};
 
 Main();
 
@@ -130,8 +130,8 @@ function RefreshMenu()
     if(attributes_json)
     {
         const query_code = make_code();
-        document.querySelector("#url-base").innerText = base_url;
-        document.querySelector("#url-query").innerText = query_code;
+        // document.querySelector("#url-base").innerText = base_url;
+        document.querySelector("#url-query").innerText = base_url+query_code;
         document.querySelector("#floor-link").setAttribute("href",base_url+query_code);
     }
 }
@@ -150,12 +150,13 @@ function get_floor_attribute_index(name)
 // Returns a string
 function num_to_hex(num,length)
 {
-    var hex = num.toString(16);
+    var hex = parseInt(num).toString(16);
+    // console.log(typeof(num),num,"-->",typeof(hex),hex);
 
     // Add leading zero
     var length_difference = length - hex.length;
     if(hex.length < length)
-        return "0".repeat(length_difference) + hex;
+        return ["0".repeat(length_difference), hex].join('');
     else
         return hex;
 }
@@ -180,7 +181,7 @@ function make_code()
 
         // var attribute_index = get_floor_attribute_index(box["name"]);
         var floor_id = box["id"];
-        console.log("Floor id:",floor_id);
+        console.log("Floor id:",typeof(floor_id),floor_id);
         // var attributes = attributes_json[i];
         // console.log(attributes);
 
@@ -191,11 +192,11 @@ function make_code()
         for(var i=0; i<box["options"].length; i++)
         {
             var option = box["options"][i];
-            const chosen_index = option["id"];
+            const chosen_index = option["index"];
 
             // Only encode option if it's not the default
             // if(!attributes_json[attribute_index]["default"].includes(option["text"]))
-            if(attributes_json.length==0 || attributes_json[floor_id]["options"][i]["default"] != chosen_index)
+            if(Object.keys(attributes_json) == 0 || attributes_json[floor_id]["options"][i]["default"] != chosen_index)
             // if(true)
             {
                 // Add index of option
@@ -222,5 +223,6 @@ function make_code()
 
     // console.log(hex_strings);
 
+    // return "v1=" + hex_strings.join(';');
     return hex_strings.join(';');
 }
