@@ -135,8 +135,10 @@
 
     <div id="panel" class="hidden">
         <div id="minimize"></div>
-        <div id="listing">
-            <p class="entry">1: cm 25 x 12,5 x 2,3, Spina di pesce, Colori misti, Spazzolato</p>
+        <div id="listing-container">
+            <div id="listing">
+                <p class="entry">1: cm 25 x 12,5 x 2,3, Spina di pesce, Colori misti, Spazzolato</p>
+            </div>
         </div>
         <a id="floor-link" href="" target="_blank">
             <span id="url-base"></span>
@@ -150,6 +152,14 @@
     <script src="main.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <div id="dummy">
+        {% for i in range(10) %}
+        <div class="dummy-entry">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, molestiae.
+        </div>
+        {% endfor %}
+    </div>
     
     <footer>Design e realizzazione © 2021 Vittorio Minuzzo</footer>
 

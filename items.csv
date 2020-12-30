@@ -1,21 +1,36 @@
 img,num,art,finiture,dim,spess,cod_art
 matt.jpg,100,Mattone,Grezzo,"25,5 x 12","5,5",M251255
 ,,,,,,
-list.jpg,102,Listello,"Spazzolato, levigato","21,5 x 3","2,3",L210323
+,101,Mezzo mattone,Grezzo,,,
+,,,,,,
+list.jpg,102,Listello,"Grezzo, levigato","21,5 x 3","2,3",L210323
 ,,,,25 x 5,"2,8",L250528
 ,,,,"25,5 x 5,5","2,3",L250523
 ,,,,"25,5 x 5,5",6,L250560
 ,,,,30 x 7,"2,3",L300723
 ,,,,30 x 4,3,L300430
 ,,,,,,
-quad.jpg,103,Tavella quadrata,"Spazzolato, levigato",12 x 12,"2,3",Q121223
+quad.jpg,103,Tavella quadrata,"Spazzolato, levigato, spazzolato",12 x 12,"2,3",Q121223
 ,,,,"18,5 x 18,5","2,3",Q181823
 ,,,,20 x 20,"2,3",Q202023
 ,,,,30 x 30,3,Q303030
 ,,,,,,
-rett.jpg,103,Tavella rettangolare,"Spazzolato, levigato","25 x 12,5","2,3",R251223
+rett.jpg,103,Tavella rettangolare,"Spazzolato, levigato, spazzolato","25 x 12,5","2,3",R251223
 ,,,,30 x 15,"2,3",R301523
 ,,,,50 x 20,3,R502030
+,,,,,,
+list_obliquo.jpg,?,Listello obliquo,,,,
+,,,,,,
+pozzale_conv.jpg,122,Pozzale convesso,Grezzo,"12,5 x 5,5",2,
+,,,,,,
+cornice_s.jpg,125,Cornice,Grezzo,31 x 12,?,
+,,,,,,
+pozzale.jpg,127,Pozzale,Grezzo,25 (lato esterno),2,
+,,,,29 (lato esterno),"2,1",
+,,,,29 (lato esterno),"2,9",
+,,,,31 (lato esterno),"2,9",
+,,,,32 (lato esterno),3,
+,,,,,,
 ,,,,,,
 hex.jpg,155,Tavella esagonale,"Spazzolato, levigato","11,25 x 6,5",2,E116520
 ,,,,"20,5 x 12","2,3",E201223
@@ -27,5 +42,8 @@ ott.jpg,156,Tavella ottagonale,"Spazzolato, levigato","20 (lato 8,5)","2,3",O200
 prov.jpg,158,"Tavella ""provenzale""","Spazzolato, levigato","27,5 x 20","2,3",P272023
 ,,,,"34,5 x 26",3,P342630
 ,,,,,,
-rombo.jpg,,Tavella rombo,"Spazzolato, levigato",x,x,R000000
+rombo.jpg,?,Tavella rombo,"Spazzolato, levigato",x,x,R000000
 ,,,,x,x,R000000
+,,,,,,
+,,,,,,
+capitello.jpg,?,Capitello,?,?,?,?

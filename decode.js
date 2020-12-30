@@ -36,7 +36,10 @@ function Load()
     // var all_floor_options = [];
     var chosen_floor_options = {};
 
+
     floors.forEach(string => {
+
+        // console.log(string);
 
         var floor_type = parseInt(string.slice(0,2),16); // Convert hex to decimal
         var options_str = "";
@@ -45,7 +48,10 @@ function Load()
 
         console.log("Floor index (decimal):", floor_type, "Options:", options_str);
 
+        console.log("Floor type:",floor_type);
+
         chosen_floor_options[floor_type] = {
+            "code": string,
             "name": attributes_json[floor_type]["name"],
             "img": attributes_json[floor_type]["img"],
             "options": [],
@@ -59,22 +65,6 @@ function Load()
         });
 
         console.log(attributes_json[floor_type]);
-
-        // console.log("Chosen floor options");
-        // console.log(chosen_floor_options);
-
-        // var attributes = attributes_json[floor_type];
-        // console.log("Attributes for floor type",floor_type);
-        // console.log(attributes);
-
-        
-        // attributes["options"].forEach(option => {
-        //     var default_index = option["default"];
-        //     text_options[floor_type] = {
-        //         "label": option["label"],
-        //         "value": option["values"][default_index],
-        //     };
-        // });
         
         var options = split_string_into_pairs_of_two(options_str);
         // console.log(options);
@@ -85,50 +75,24 @@ function Load()
 
             var value = attributes_json[floor_type]["options"][i]["values"][j];
             chosen_floor_options[floor_type]["options"][i]["value"] = value;
-
-            // text_options[floor_type] = {
-            //     "label": attributes["options"][i]["label"],
-            //     "value": attributes["options"][i]["values"][j],
-            // };
         });
-        // attributes["options"].forEach(option => {
-        //     options.push([option[0], option[1][0]])
-        // });
-        // all_floor_options.push(text_options);
-        // console.log("Text options:",text_options);
-
-        // var defaults = {};
-        // attributes["options"].forEach(option => {
-            
-        // });
     });
 
     console.log("Chosen_floor_options:");
     console.log(chosen_floor_options);
 
-
     var decoded_listing = document.querySelector("#decoded-listing");
     decoded_listing.innerText = "";
 
-    for(const [key,value] of Object.entries(chosen_floor_options)) {
-        decoded_listing.innerText += "\n";
-        decoded_listing.innerText += value["name"];
-        decoded_listing.innerText += "\n";
+
+    for(const [key,value] of Object.entries(chosen_floor_options))
+    {
+        decoded_listing.innerText += `\n[${value['code']}]\n${value['name']}\n`;
         value["options"].forEach(option => {
             decoded_listing.innerText += `${option["label"]}: ${option["value"]}\n`;
         });
         decoded_listing.innerText += "\n";
     }
-
-    /*
-    all_floor_options.forEach(floor => {
-        floor.forEach(option => {
-           decoded_listing.innerText += option.join(": ");
-           decoded_listing.innerText += "\n";
-        });
-        decoded_listing.innerText += "\n";
-    });
-    */
 }
 
 function split_string_into_pairs_of_two(str)

@@ -244,6 +244,7 @@ span.floor-name {
 
 .row.header .cell {
     padding: 0 1rem;
+    overflow: hidden;
 }
 
 /* .row.header .cell:first-child {
@@ -550,10 +551,19 @@ header {
     /* display: none; */
     z-index: 200;
     min-width: 100px;
+    max-width: 80vw;
+    /* max-height: 30vh; */
     padding: 1.5rem;
-    padding-top: 2.5rem;
+    /* padding-top: 2.5rem; */
+    padding-right: 2.5rem;
+
     display: flex;
     flex-direction: column;
+
+    /* display: grid; */
+    /* grid-template-columns: 1fr; */
+    /* grid-template-rows: 3fr 1fr; */
+
     border-top-left-radius: .6rem;
     border-top-right-radius: .6rem;
     box-shadow: 0 0 30px 30px rgba(0, 0, 0, 0.1);
@@ -561,6 +571,8 @@ header {
 
     opacity: 1;
     transition: 0.2s;
+
+    /* transform: translateY(-20px); */
 }
 
 #panel.hidden {
@@ -569,11 +581,19 @@ header {
     transition: 0.2s;
 }
 
+#panel #listing-container {
+    width: 100%;
+    overflow: scroll;
+}
+
 #panel #listing {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-around;
+    /* justify-content: center; */
+
+    width: 100%;
     
     /* max-width: 60vw; */
     /* overflow: scroll; */
@@ -581,7 +601,8 @@ header {
 
 #listing .entry {
     padding: 1rem;
-    min-width: 10rem;
+    max-width: 10vw;
+    min-width: 8rem;
     height: 100%;
     font-size: .9rem;
     display: flex;
@@ -597,8 +618,8 @@ header {
 }
 
 #listing .entry a {
-    max-width: 80px;
-    max-height: 80px;
+    max-width: 50px;
+    max-height: 50px;
 }
 
 #listing .entry a img {
@@ -612,6 +633,7 @@ header {
 
 #listing .entry .description {
     padding-top: 10px;
+    font-size: 0.9rem;
 }
 
 #floor-link {
@@ -693,21 +715,20 @@ header {
 /************ Dummy testing ************/
 
 #dummy {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    opacity: 0.5;
-    width: 300px;
-    height: 50px;
-    background: #aaa;
-    transition: 0.5s;
+    width: 40vw;
+    height: 300px;
+    background: #ccc;
+    margin: auto;
+    display: flex;
+    overflow: scroll;
+
+    display: none;
 }
 
-#dummy:hover {
-    opacity: 1;
-    border: 1px solid black;
-    transition: 0.5s;
-    height: 200px;
+.dummy-entry {
+    height: 100%;
+    margin: .5rem;
+    border: 1px solid #555;;
 }
 
 
@@ -723,4 +744,35 @@ header {
 
 .shifted {
     align-self: flex-end;
+}
+
+
+
+@media screen and (max-height: 800px) {
+
+    .entry {
+        padding-top: 1rem;
+        font-size: 0.8rem;
+    }
+
+    .entry a {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 900px) {
+
+    #tablegrid .row.header {
+        font-size: 0.9rem;
+    }
+
+    #tablegrid .row .cell:nth-child(7) {
+        display: none !important;
+    }
+
+    #tablegrid .sku {
+        display: none;
+    }
+
 }
