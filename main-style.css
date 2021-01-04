@@ -253,7 +253,7 @@ span.floor-name {
 
 .row {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr .5fr;
+    grid-template-columns: 1.5fr .5fr 1fr 1fr 1.5fr .5fr 1fr .5fr;
     align-items: center;
     /* padding: 0 1rem; */
     /* padding-right: 0; */

@@ -17,7 +17,7 @@ def row_is_empty(row):
 
 
 def parse_csv(csv_path):
-    with open(csv_path) as csv_file:
+    with open(csv_path, encoding='UTF-8') as csv_file:
         csv_reader = csv.reader(csv_file)
 
         headers = []
@@ -57,9 +57,9 @@ def parse_csv(csv_path):
             new_item[headers[i]] = buffer[i]
         item_rows.append(new_item)
         
-        # print('-'*10)
-        # for item_row in item_rows:
-        #     print(item_row)
+        print('-'*10)
+        for item_row in item_rows:
+            print(item_row)
 
         return [headers,item_rows]
 

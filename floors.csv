@@ -1,25 +1,25 @@
-1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19
-yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes
-Rettangolo,Rettangolo,Listelli,Quadrati,Quadrati,Quadrati,Provenzale,Esagono,Rombo,Quadrifoglio,Composizione 10,Composizione 14,Composizione 15,Composizione 17,Composizione 18,Ottagoni (comp. 20),Composizione 37,Composizione 38,Cotto e legno
-D01.jpg,D06 26x12.jpg,D04.jpg,D13.jpg,N13.jpg,D16.jpg,D08.jpg,D11.jpg,D07.jpg,D09.jpg,D10.jpg,D14.jpg,D15.jpg,D17.jpg,D18.jpg,D20.jpg,D37.jpg,D38.jpg,D23.jpg
-,,,,,,,,,,,,,,,,,,
-Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione
-"!cm 25 x 12,5 x 2,3",!cm 25 x 12.jpg,"cm 21,5 x 3 x 2,3","cm 12 x 12 x 2,3","cm 12 x 12 x 2,3","!cm 12 x 12 x 2,3","!Medio (cm 27,5 x 20 x 2,3)","Piccolo (lato 6,5)",???,"cm 23 x 23 x 2,5",Quadrati cm 12,"Quadrati cm 18,5",Quadrati cm 20,"Quadrati cm 18,5","Quadrati cm 18,5","Ottagoni cm 8,5 (lato)","Rettangoli cm 25 x 12,5","Esagoni cm 6,5 (lato)",Pannelli da 1 mq
-"cm 30 x 15 x 2,3",cm 30 x 15.jpg,"!cm 25,5 x 5,5 x 2,3","cm 18,5 x 18,5 x 2,3","cm 18,5 x 18,5 x 2,3","cm 18,5 x 18,5 x 2,3","Grande (cm 34,5 x 26 x 3)",!Medio (lato 12),???,,,,,,,"Ottagoni cm 10,5 (lato)",,,
-cm 50 x 20 x 3,cm 50 x 20.jpg,cm 30 x 4 x 3,"cm 20 x 20 x 2,3","!cm 20 x 20 x 2,3","cm 20 x 20 x 2,3",,Grande (lato 18),,,,,,,,,,,
-,,,!cm 30 x 30 x 3,cm 30 x 30 x 3,cm 30 x 30 x 3,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-Posa,Posa,Posa,,,,,,,,,,,,,,,,
-Parallela,!Parallela,Parallela,,,,,,,,,,,,,,,,
-!Lisca di pesce,Lisca di pesce,!Lisca di pesce,,,,,,,,,,,,,,,,
-,,,,,,,,,,,,,,,,,,
-Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,
-!Spazzolato,Spazzolato,Spazzolato,!Spazzolato,Spazzolato,Spazzolato,!Spazzolato,!Spazzolato,!Spazzolato,!Spazzolato,!Spazzolato,Spazzolato,!Spazzolato,Spazzolato,Spazzolato,!Spazzolato,Spazzolato,Spazzolato,
-Levigato,!Levigato,!Levigato,Levigato,!Levigato,!Levigato,Levigato,Levigato,Levigato,Levigato,Levigato,!Levigato,Levigato,!Levigato,!Levigato,Levigato,!Levigato,!Levigato,
-Grezzo,Grezzo,,,,,,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,
-,,,,,,,,,,,,,,,,,,
-Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,
-!Colori misti,Colori misti,Colori misti,Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,Colori misti,!Colori misti,
-Rosato,!Rosato,Rosato,!Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,!Rosato,Rosato,
-Paglierino,Paglierino,!Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,
-Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,
+1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,42
+yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes,yes
+Rettangolo,Rettangolo,Listelli,Quadrati,Quadrati,Quadrati,Provenzale,Esagono,Rombo,Quadrifoglio,Composizione 10,Composizione 14,Composizione 15,Composizione 17,Composizione 18,Ottagoni (comp. 20),Composizione 37,Composizione 38,Cotto e legno,Composizione 42
+D01.jpg,D06 26x12.jpg,D04.jpg,D13.jpg,N13.jpg,D16.jpg,D08.jpg,D11.jpg,D07.jpg,D09.jpg,D10.jpg,D14.jpg,D15.jpg,D17.jpg,D18.jpg,D20.jpg,D37.jpg,D38.jpg,D23.jpg,D42.jpg
+,,,,,,,,,,,,,,,,,,,
+Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione,Dimensione
+"!cm 25 x 12,5 x 2,3",!cm 25 x 12.jpg,"cm 21,5 x 3 x 2,3","cm 12 x 12 x 2,3","cm 12 x 12 x 2,3","!cm 12 x 12 x 2,3","!Medio (cm 27,5 x 20 x 2,3)","Piccolo (lato 6,5)",???,"cm 23 x 23 x 2,5",Quadrati cm 12,"Quadrati cm 18,5",Quadrati cm 20,"Quadrati cm 18,5","Quadrati cm 18,5","Ottagoni cm 8,5 (lato)","Rettangoli cm 25 x 12,5","Esagoni cm 6,5 (lato)",Pannelli da 1 mq,Quadrati da cm 25
+"cm 30 x 15 x 2,3",cm 30 x 15.jpg,"!cm 25,5 x 5,5 x 2,3","cm 18,5 x 18,5 x 2,3","cm 18,5 x 18,5 x 2,3","cm 18,5 x 18,5 x 2,3","Grande (cm 34,5 x 26 x 3)",!Medio (lato 12),???,,,,,,,"Ottagoni cm 10,5 (lato)",,,,
+cm 50 x 20 x 3,cm 50 x 20.jpg,cm 30 x 4 x 3,"cm 20 x 20 x 2,3","!cm 20 x 20 x 2,3","cm 20 x 20 x 2,3",,Grande (lato 18),,,,,,,,,,,,
+,,,!cm 30 x 30 x 3,cm 30 x 30 x 3,cm 30 x 30 x 3,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+Posa,Posa,Posa,,,,,,,,,,,,,,,,,
+Parallela,!Parallela,Parallela,,,,,,,,,,,,,,,,,
+!Lisca di pesce,Lisca di pesce,!Lisca di pesce,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,
+Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,Finitura,,Finitura
+!Spazzolato,Spazzolato,Spazzolato,!Spazzolato,Spazzolato,Spazzolato,!Spazzolato,!Spazzolato,!Spazzolato,!Spazzolato,!Spazzolato,Spazzolato,!Spazzolato,Spazzolato,Spazzolato,!Spazzolato,Spazzolato,Spazzolato,,!Spazzolato
+Levigato,!Levigato,!Levigato,Levigato,!Levigato,!Levigato,Levigato,Levigato,Levigato,Levigato,Levigato,!Levigato,Levigato,!Levigato,!Levigato,Levigato,!Levigato,!Levigato,,Levigato
+Grezzo,Grezzo,,,,,,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,Grezzo,,Grezzo
+,,,,,,,,,,,,,,,,,,,
+Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,Colorazione,,Colorazione
+!Colori misti,Colori misti,Colori misti,Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,!Colori misti,Colori misti,!Colori misti,,!Colori misti
+Rosato,!Rosato,Rosato,!Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,Rosato,!Rosato,Rosato,,Rosato
+Paglierino,Paglierino,!Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,Paglierino,,Paglierino
+Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,Altro,,Altro

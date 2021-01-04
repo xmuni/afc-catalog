@@ -664,5 +664,39 @@
                 "default": 0
             }
         ]
+    },
+    "42": {
+        "id": "42",
+        "enabled": true,
+        "name": "Composizione 42",
+        "img": "D42.jpg",
+        "options": [
+            {
+                "label": "Dimensione",
+                "values": [
+                    "Quadrati da 25"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Finitura",
+                "values": [
+                    "Spazzolato",
+                    "Levigato",
+                    "Grezzo"
+                ],
+                "default": 0
+            },
+            {
+                "label": "Colorazione",
+                "values": [
+                    "Colori misti",
+                    "Rosato",
+                    "Paglierino",
+                    "Altro"
+                ],
+                "default": 0
+            }
+        ]
     }
 }
